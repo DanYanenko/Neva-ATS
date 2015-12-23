@@ -8,4 +8,4 @@ To use these source files:
 
 3) type bower i;
 
-4)launch index.html.
+4) type gulp, it will start browser livereload, JADE/SCSS preprocessors and watchers.
