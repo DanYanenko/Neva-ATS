@@ -4,7 +4,7 @@ To use these source files:
 
 1) clone this repo;
 
-2)type cd Neva-ATS
+2) type cd Neva-ATS
 
 3) type npm i;
 
