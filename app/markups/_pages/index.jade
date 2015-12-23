@@ -1,0 +1,69 @@
+extends ../_common/_layout.jade
+include ../_mixins/_mixins.jade
+block title
+	title Нева АТС. Строительная компания
+block content
+	.container
+		section.slider
+			.slider__list-wrapp
+				ul.slider__list
+					li.slider__item.first.active 
+						img.slider__pic(src="img/content/slider_images/slider_image.jpg" alt="Изображение для слайдера 1")
+					li.slider__item.second
+						img.slider_pic(src="img/content/slider_images/slider_image.jpg" alt="Изображение для слайдера 2")
+					li.slider__item.third
+						img.slider_pic(src="img/content/slider_images/slider_image.jpg" alt="Изображение для слайдера 3")
+					li.slider__item.fourth
+						img.slider_pic(src="img/content/slider_images/slider_image.jpg"  alt="Изображение для слайдера 4")
+				.slider__controls
+						a.slider__control.prev(href="#")
+						a.slider__control.first.active(href="#")
+						a.slider__control.second(href="#")
+						a.slider__control.third(href="#")
+						a.slider__control.fourth(href="#")
+						a.slider__control.next(href="#")
+		.main-content
+			section.projects
+				-
+					projectsList = {
+						project_1 : {
+							img : {
+								path : 'img/content/projects/img_1.jpg',
+								caption : 'Компания-производитель Outokumpu уменьшила квартальный убыток'
+							},
+							desc : 'Один из лидеров по выпуску нержавеющей стали сократил убыток от своей производственной деятельности.'
+						},
+
+						project_2 : {
+							img : {
+								path : 'img/content/projects/img_2.jpg',
+								caption : 'Компания-производитель Outokumpu уменьшила квартальный убыток'
+							},
+							desc : 'Один из лидеров по выпуску нержавеющей стали сократил убыток от своей производственной деятельности.'
+						},
+
+						project_3 : {
+							img : {
+								path : 'img/content/projects/img_3.jpg',
+								caption : 'Компания-производитель Outokumpu уменьшила квартальный убыток'
+							},
+							desc : 'Один из лидеров по выпуску нержавеющей стали сократил убыток от своей производственной деятельности.'
+						}
+					}
+				+projects(projectsList)
+				p.projects__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium necessitatibus amet dolorem placeat voluptate culpa, rem, eligendi blanditiis libero cumque sint beatae ipsum, cupiditate. Fugit, nostrum accusantium quidem inventore quisquam.
+		section.banner
+			p.banner__text 15 лет на благо России
+		.main-content
+			section.about
+				article.about__content
+					h2.about__header О компании
+					p.about__text  
+						span.about__text_bold Lorem ipsum dolor
+						|&nbsp;sit amet, consectetur adipisicing elit. Sed, ratione sunt eaque tenetur, dolorum labore blanditiis natus velit est nisi porro ipsa. Exercitationem error libero minima officia. Rerum voluptatum, ut!
+					p.about__text  
+						span.about__text_bold Lorem ipsum dolor
+						|&nbsp;sit amet, consectetur adipisicing elit. Sed, ratione sunt eaque tenetur, dolorum labore blanditiis natus velit est nisi porro ipsa. Exercitationem error libero minima officia. Rerum voluptatum, ut!sit amet, consectetur adipisicing elit. Sed, ratione sunt eaque tenetur, dolorum labore blanditiis natus velit est nisi porro ipsa. Exercitationem error libero minima officia. Rerum voluptatum, ut!sit amet, consectetur adipisicing elit. Sed, ratione sunt eaque tenetur, dolorum labore blanditiis natus velit est nisi porro ipsa. Exercitationem error libero minima officia. Rerum voluptatum, ut!sit amet, consectetur adipisicing elit. Sed, ratione sunt eaque tenetur, dolorum labore blanditiis natus velit est nisi porro ipsa. Exercitationem error libero minima officia. Rerum voluptatum, ut!
+					p.about__text 
+						span.about__text_bold Lorem ipsum dolor
+						|&nbsp;sit amet, consectetur adipisicing elit. Sed, ratione sunt eaque tenetur, dolorum labore blanditiis natus velit est nisi porro ipsa. Exercitationem error libero minima officia. Rerum voluptatum, ut!

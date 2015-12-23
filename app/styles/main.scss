@@ -1,0 +1,47 @@
+@import '_sections/_main_page.scss';
+@import '_sections/_header.scss';
+@import '_sections/_footer.scss';
+//@import '_mixins/_mixins.scss';
+
+.container{
+	position:relative;
+	height:100%;
+	width:100%;
+	min-width:1280px;
+	
+	
+
+	.main-content{  
+		width:940px;
+		position: relative;
+		margin:0 auto;
+		//border: dotted;
+	}
+}
+
+.my-placeholder{
+	color:#ccc;
+	font-family: 'helvetica_neuecyr_light';
+	font-size: 14px;
+}
+
+.browser-notification{
+	position: relative;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 0;
+
+	margin:auto;
+	height:50px;
+	width:100%;
+	text-align: center;
+
+	font-family: 'open_sanssemibold';
+	font-size:14px;
+	span{
+		font-family: 'open_sansbold';
+		font-size:16px;
+	}
+
+}

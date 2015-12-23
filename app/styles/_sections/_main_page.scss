@@ -1,0 +1,228 @@
+@import '../_mixins/_mixins.scss';
+.slider{
+	position: relative;
+	width: 1280px;
+	height: 700px;
+	margin: 0 auto 115px;
+	overflow:hidden;
+
+	.slider__list-wrapp{
+		width: 5500px;
+	}
+	
+	.slider__list{
+		list-style-type: none;
+		padding: 0;
+		margin:0;
+		position:relative; 
+		left:0;
+		transition: all 0.6s;
+	}
+
+	.slider__item{
+		display:block;
+		float: left;
+		position: relative;
+		width:1280px;
+		height:800px;
+	}
+
+	.slider__pic{
+		position: relative;
+		z-index:-1;
+	}
+
+	.slider__text{
+		position:absolute;
+		font-size:36px;
+		font-family: 'helvetica_neuecyr_light';
+		color:#000;		
+		left: 170px;
+		top: 422px;
+
+		&_bold{
+			font-family: 'helvetica_neuecyr_medium';
+		}
+	}
+
+	.slider__controls{
+		position: absolute;
+		left: 170px;
+  		top: 602px;
+		//height: 6px;
+	}
+
+	.slider__control{
+		display: inline-block;
+		vertical-align: middle;
+
+		border: rgb(37, 50, 117) solid 1px;
+		border-radius: 50%;
+		background-color: rgb(255, 255, 255);
+		
+		width: 14px;
+		height: 14px;
+		
+
+
+		margin-left: 20px;
+		&:first-child{
+			margin-left: 0;
+		}
+		&.active{
+			background-color: #333366;
+		}
+		&.prev, &.next{
+			border:none;
+			background-color: transparent;
+			background-image: url(../img/sprites/slider_controls_sprite.png);
+			background-repeat: no-repeat;
+			width: 16px;
+    		height: 25px;
+    		border-radius: 0;
+
+		}
+		&.prev{
+			background-position: -10px -55px;
+		}
+		&.next{
+			background-position: -10px -10px;
+		}
+	}	
+}
+
+//	Блок "Наши проекты"
+
+.projects{
+
+//	Данные об отступах для контентных картинок
+	$projectsImgInfo:(
+	'img_1' : (-56px, -35px),
+	'img_2' : (-208px, -132px),
+	'img_3' : (-120px, -50px)
+	);
+	
+	margin-bottom: 111px;
+
+	@include thumbnails($projectsImgInfo);
+
+	&__header{
+		@include sectionHeader();
+	}
+	
+	.projects__list{
+		list-style-type: none;
+		padding:0;
+		margin:0 0 33px;
+
+		font-size: 0;
+	}
+	
+	.projects__item{
+		display: inline-block;
+		width:300px;
+		vertical-align: top;
+		margin-left: 20px;
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+
+	.projects__links{
+		text-decoration: none;
+		position: relative;
+		display:block;
+		
+		word-break: break-word;
+		width:220px;
+
+		transition:all 0.2s;
+		
+		&:hover{
+			.project_desc{
+				color: rgb(37, 50, 117);;
+			}
+		}
+	}
+
+	.project_label{
+		font-size: 18px;
+		font-family: "helvetica_neuecyr_medium";
+		color: rgb(0, 0, 0);		
+		width: 231px;
+		margin-bottom: 14px;
+		text-align: left;
+	}
+
+	.project_image{
+		width:300px;
+		height:179px;
+
+		overflow: hidden;
+		margin:0 0 17px;
+	}
+
+	
+
+
+	.project_desc{		
+		font-size: 14px;
+		font-family: "helvetica_neuecyr_light";
+		color: rgb(0, 0, 0);
+		width: 300px;
+		text-align: justify;
+	}
+
+	.projects__text{
+		font-size: 14px;
+		font-family: "helvetica_neuecyr_light";
+		text-align: justify;
+		margin: 0;
+		line-height: 18px;
+	}
+}
+
+.banner{
+	width:1280px;
+	height:297px;
+	margin:0 auto 115px;
+	background-image: url(../img/backgrounds/rzd.jpg);
+	text-align: center;
+	&:before{
+		content: "";
+		display: inline-block;
+		height:100%;
+		vertical-align: middle;
+	}
+	.banner__text{
+		margin: 0;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 48px;
+		font-family: "helvetica_neuecyr_bold";
+		color: #fff;
+	}
+}
+
+.about{
+	margin-bottom: 138px;
+	&__header{
+		@include sectionHeader();
+	}
+
+	&__text{
+		margin:0;
+		font-family: "helvetica_neuecyr_light";
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.1em;
+		margin-bottom: 26px;
+		text-align: justify;
+		&_bold{
+			font-family: "helvetica_neuecyr_bold";
+		}
+	}
+}
+
+
+

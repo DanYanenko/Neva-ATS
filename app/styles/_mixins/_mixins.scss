@@ -1,0 +1,29 @@
+@mixin thumbnails($map){	
+	@each $imageClass, $offSet in $map{
+		.#{$imageClass}{
+			position: relative;
+			left: nth($offSet, 1);
+			top: nth($offSet, 2);
+		}
+	}	
+}
+
+@mixin sectionHeader(){
+	font-size: 36px;
+		font-family: "helvetica_neuecyr_roman";
+		color: rgb(37, 50, 117);
+		text-transform: uppercase;
+		text-align: left;
+		//width: 333px;
+		letter-spacing:0.1em;
+		margin:0 0 34px;
+
+		&:after{
+			content:"";
+			margin-top: 23px;
+			display: block;
+			background-color: rgb(99, 99, 99);
+			width: 140px;
+			height: 3px;
+		}
+}

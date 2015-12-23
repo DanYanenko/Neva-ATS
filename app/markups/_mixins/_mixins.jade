@@ -1,0 +1,48 @@
+mixin nav(className, items, upperCase, activeIndex)
+	nav(class= className + " clearfix")
+		div(class=className + "__container" + " clearfix")
+			ul(class= className + "__list" + " clearfix")
+				-var index = 0
+				-for(var item in items)
+					-index++
+					li(class=className + ((activeIndex == index) ? ('__item' + '_active') : '__item') )
+						-if(upperCase == true)
+							a(href=items[item] class= className + "__link" id= className + '__' + 'item_' + index)= item.toUpperCase()
+						-else
+							a(href=items[item] class= className + "__link")= item
+		if block
+			block
+
+mixin thumbnails-blocks(sectionsList)
+	section.thumbnails
+		ul.thumbnails-blocks__list
+			-for(var section in sectionsList)
+				li.thumbnails-blocks__item
+					section(class=section)
+						ul.section__inner__list.clearfix
+							-var i = 0;
+							-for(var innerItem in sectionsList[section])
+								-if (i === 0)
+									li.section__inner__item_main
+										a.main-image(href="#")
+											img.main-image__img(src=sectionsList[section][innerItem]['path'] alt=sectionsList[section][innerItem]['caption'])
+											figcaption.main-image_label= sectionsList[section][innerItem]['caption'].toUpperCase()
+									-i++;
+								-else
+									li(class="section__inner__item " + i)
+										a.small-image(href="#")
+											img(class="small-image__img " + "small_" + i src= sectionsList[section][innerItem]['path'] alt = sectionsList[section][innerItem]['caption'])
+											figcaption.small-image_label= sectionsList[section][innerItem]['caption'].toUpperCase()
+									-i++;
+mixin projects(projectsList)
+	h2.projects__header Наши проекты
+	ul.projects__list.clearfix
+		-var i = 1;
+		-for(var project in projectsList)				
+			li.projects__item
+				a.projects__links(href="#")
+					figure.project_image
+						img(class="project-image__img " + "img_" + i src=projectsList[project]['img']['path'] alt="Наши проекты")
+					figcaption.project_label= projectsList[project]['img']['caption']
+					div.project_desc= projectsList[project]['desc']
+					-i++;

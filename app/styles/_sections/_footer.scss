@@ -1,0 +1,316 @@
+@import '../_mixins/_mixins.scss';
+
+.footer{
+	min-width: 1280px;
+}
+.footer-container{
+	width:1280px;
+	margin:0 auto;
+	
+	background:url(../img/backgrounds/bridges.jpg) no-repeat;
+	background-color:#111;	
+}
+
+.footer__link{
+	display:inline-block;
+	vertical-align: middle;
+}
+.footer__link__text{
+	position: absolute;
+	left:-9999px;
+	font-size:12px;
+}
+
+.footer-upper{
+	width:1280px;
+	background-color:#fff;
+	margin:0 auto;
+
+
+	&:before{
+		content:"";
+		display: block;
+		background-color: rgb(37, 50, 117);
+		width: 1280px;
+		height: 4px;
+	}
+}
+
+
+
+.footer-upper__container{
+	margin: 0 auto;
+    width: 940px;
+
+
+
+	.footer__main-nav{
+		display:inline-block;
+		height: 78px;
+		vertical-align: middle;
+		margin-left: 58px;
+
+		&__list{
+			margin:0;
+			padding:0;
+			list-style-type: none;
+		}
+
+		&__item{
+			position: relative;
+			float:left;
+			margin-left: 53px;
+
+			height:78px;
+
+			&:before{
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+
+			&:first-child{
+				margin-left: 0;
+				
+			}
+			
+			
+		}
+
+		&__link{
+			color:#000;
+			font-size:18px;
+			font-family: 'helvetica_neuecyr_roman';
+
+			
+
+			letter-spacing:0.1em;
+			text-decoration: none;
+
+			max-width:175px;
+			white-space: nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;
+
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+.footer-content{
+	width:1280px;
+	margin:0 auto;
+	//margin-top: 65px;
+	//background-color:#111111;
+}
+
+.left-block{
+	float:left;
+	color:#fff;
+	padding-top:65px;
+	padding-left: 162px;
+	.contacts{
+		font-style: normal;
+
+		&__item{
+			font-family:'helvetica_neuecyr_medium';
+			margin-bottom:10px;
+
+		}
+		&__label{
+			font-size:18px;
+		}
+		&__link{
+			font-size:30px;
+			color:#fff;
+			text-decoration: none;
+		}
+
+		.email{
+			color:#fff;
+			font-size:14px;
+			width:264px;
+			display:block;
+			text-align: center;			
+			font-family:'helvetica_neuecyr_roman';
+			margin-bottom: 35px;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		
+		.address{
+			margin-top: 43px;
+			font-style: normal;
+			font-size:14px;
+			width:264px;
+			text-align: center;
+			margin-bottom: 20px;			
+			font-family:'helvetica_neuecyr_roman';
+		}
+
+	}
+
+	.contacts__list{
+		list-style-type: none;
+		margin:0;
+		padding:0;
+	}
+	.misc{
+		width:267px;
+		text-align: center;
+		margin-bottom: 	65px;
+		&__info, &__policy, .rts__link, .rts__caption{
+			display: block;
+		}
+		&__info, &__policy,.rts__caption{
+			font-family:'helvetica_neuecyr_light';
+			font-size:14px;
+			color:#fff;
+		}
+
+		&__info, &__policy{
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		
+		.rts__img{
+			margin-bottom: 19px;
+		}
+		.rts__link{
+			margin-bottom: 14px;
+
+			text-decoration: none;
+		}
+		.rts__caption{
+		}
+
+		&__info{
+			margin-bottom:10px;	
+		}		
+	}
+	
+	.footer__nav{
+		margin-bottom: 22px;
+		&__list{
+			list-style-type: none;
+			padding:0;
+			margin:0;
+		}
+		&__item{
+			margin-left: 39px;
+			float: left;
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+		&__link{
+			color:#fff;
+			text-decoration: none;
+			font-family:'helvetica_neuecyr_light';
+			font-size: 18px;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.misc-bottom{
+		margin-bottom: 19px;
+	}
+	.rts__img-small{
+		vertical-align: middle;
+	}
+	
+	.footer__link{
+		margin-left: 12px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.year{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 60px;
+		font-family:'helvetica_neuecyr_light';
+		font-size: 14px;
+	}
+	.bottom-notion{
+		font-family:'helvetica_neuecyr_light';
+		font-size: 14px;
+		margin-bottom: 35px;
+	}
+
+}
+
+.right-block{
+	float:right;
+
+	width:640px;
+
+
+
+	.search-form{
+		font-size:0;
+	}
+
+	.search-form__input, .search__form__submit{
+		outline: none;
+		font-size:14px;
+		font-family:'helvetica_neuecyr_medium';	
+	}
+	.search-form__input{
+		border-width: 1px;
+		border-color: rgb(37, 50, 117);
+		border-style: solid;
+		background-color: rgb(255, 255, 255);
+		width: 200px;
+		height: 31px;
+		//padding-top:5px\0/;
+		padding-left:10px;	
+
+		::-webkit-input-placeholder{
+			color:#ccc;
+			font-family: 'helvetica_neuecyr_bold';
+			font-size: 16px;
+		}
+
+		::-moz-placeholder{
+			color:#ccc;
+			font-family: 'helvetica_neuecyr_light';
+			font-size: 14px;
+		}
+
+		:-ms-input-placeholder{
+			color:#ccc;
+			font-family: 'helvetica_neuecyr_light';
+			font-size: 14px;
+		}
+	}
+
+	.search{
+		text-align: center;
+	}
+	
+	.search__form__submit{
+		border-width: 1px;
+		border-color: rgb(37, 50, 117);
+		border-style: solid;
+		border-radius: 2px;
+
+		background-color:#222e6d;
+		color:#fff;
+		width: 98px;
+		height: 31px;
+		padding:0;
+	}
+	
+	.geomap-block{
+		width:640px;
+		height:472px;
+		margin-bottom: 50px;
+	}
+
+}

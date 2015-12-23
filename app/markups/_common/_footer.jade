@@ -1,0 +1,49 @@
+footer.footer
+	.footer-upper
+		section.footer-upper__container
+			a.footer__link(href="index.html")
+				span.footer__link__text Транспортное строительство
+				img.footer__logo_(alt="footer-menu-logo" src="img/content/logo/logo_menu_footer.png")
+			-mainNavItems = {'Главная' : '#', 'Наши проекты' : '#', 'О компании' : '#', 'Контакты' : '#'}
+			+nav('footer__main-nav', mainNavItems, true)
+	.footer-container.clearfix
+		.footer-content.clearfix
+			.left-block
+				address.contacts
+					ul.contacts__list.clearfix
+						li.contacts__item
+							span.contacts__label Тел.:&nbsp;
+							a.contacts__link(href="tel:+78125726240") +7 812 572 62 40
+						li.contacts__item
+							span.contacts__label Факс:&nbsp;
+							a.contacts__link(href="tel:+78125726240") +7 812 572 62 48
+					address.address 190031 Россия город Санкт-Петербург Набережная реки Фонтанки дом 85 помещение 21Н литер А
+					a.email(href="mailto:info@neva-ats.ru") info@neva-ats.ru
+				section.misc
+					a.rts__link(href="#")
+						img.rts__img(alt="rts-image" src="img/content/logo/rts_logo_footer.png")
+						figcaption.rts__caption СК ИСО 9001
+					a.misc__info(href="#") Информация, обязательная к публикации
+					a.misc__policy(href="#") Политика конфиденциальности
+				-footerNavItems = {'Главная' : '#', 'Наши проекты' : '#', 'Контакты' : '#'}
+				+nav('footer__nav', footerNavItems, false)
+				section.misc-bottom
+					img.rts__img-small(alt="rts-image-small" src="img/content/logo/rts_small_logo_footer.png")
+					a.footer__link(href="index.html")
+						span.footer__link__text Транспортное строительство
+						img.footer__logo(alt="header-logo" src="img/content/logo/logo_small_menu_footer.png")
+					.year 2015 - Нева АТС
+				.bottom-notion Официальный сайт компании "Нева-АТС"
+			.right-block
+				.geomap-block(id="geomap-block")
+				.search
+					form.search-form(action="#" method="get")
+						input.search-form__input(type="search" placeholder="Поиск...")
+						input.search__form__submit(type="submit" value="НАЙТИ")
+
+
+
+
+
+
+
