@@ -269,12 +269,13 @@
 		width: 200px;
 		height: 31px;
 		//padding-top:5px\0/;
-		padding-left:10px;	
+		padding-left:10px;
+		line-height: 17px;	
 
 		::-webkit-input-placeholder{
 			color:#ccc;
 			font-family: 'helvetica_neuecyr_bold';
-			font-size: 16px;
+			font-size: 14px;
 		}
 
 		::-moz-placeholder{

@@ -10,7 +10,5 @@ $(document).ready(function() {
 	if($('input, textarea').length){
 		$('input, textarea').placeholder({ customClass: 'my-placeholder' });
 	}
-	
-	
 
 });

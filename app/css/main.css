@@ -224,10 +224,9 @@
     vertical-align: middle;
     font-family: 'helvetica_neuecyr_black'; }
     .header__content__upper .header__text_upper {
-      margin-bottom: 21px;
+      margin-bottom: 12px;
       letter-spacing: 0.15em; }
     .header__content__upper .header__text_upper, .header__content__upper .header__text_bottom {
-      height: 25px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
@@ -507,11 +506,12 @@
     background-color: white;
     width: 200px;
     height: 31px;
-    padding-left: 10px; }
+    padding-left: 10px;
+    line-height: 17px; }
     .right-block .search-form__input ::-webkit-input-placeholder {
       color: #ccc;
       font-family: 'helvetica_neuecyr_bold';
-      font-size: 16px; }
+      font-size: 14px; }
     .right-block .search-form__input ::-moz-placeholder {
       color: #ccc;
       font-family: 'helvetica_neuecyr_light';
